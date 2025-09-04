@@ -1,0 +1,24 @@
+﻿dùng xoa docker cu
+docker stop my-converter-app
+docker rm my-converter-app
+build docker moi
+docker build -t converter-api .
+chạy
+docker run -d -p 5000:5000 --name my-converter-app converter-api
+vidu api
+
+curl -X POST \
+  -F "file=@thu.docx" \
+  http://localhost:5000/word-to-latex-zip \
+  --output result.zip
+
+
+curl -X POST \
+  -F "file=@result.zip" \
+  http://localhost:5000/latex-zip-to-word \
+  --output final_document.docx
+
+
+ curl -X POST -F "file=@thu.docx" -F "format=latex" http://localhost:5000/convert -o thu.tex
+
+ curl -X POST -F "file=@thu.tex" -F "format=docx" http://localhost:5000/convert -o ket.docx
