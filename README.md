@@ -1,3 +1,4 @@
+DỰ ÁN TẠO SERVER CHUYỂN ĐỔI QUA LẠI GIỮA FILE WORD VÀ LATEX CÓ THỂ DÙNG TRÊN N8N
 dùng xóa docker cũ dùng các lênh sau:
 
 docker stop my-converter-app
