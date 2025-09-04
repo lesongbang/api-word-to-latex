@@ -1,14 +1,18 @@
 dùng xóa docker cũ dùng các lênh sau:
 
 docker stop my-converter-app
+
 docker rm my-converter-app
 
 đầu tiên tải dự án về vào build docker chạy thôi
 *build docker mới
+
 docker build -t converter-api .
 
 *chạy
+
 docker run -d -p 5000:5000 --name my-converter-app converter-api
+
 vídu api
 
 curl -X POST \
